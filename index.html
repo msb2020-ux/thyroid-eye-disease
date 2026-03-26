@@ -1,1 +1,329 @@
-readme
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thyroid Eye Disease – Patient Education & Resources</title>
+  <meta name="description" content="Comprehensive patient education and resources for Thyroid Eye Disease (TED). Learn about symptoms, causes, and the latest treatments." />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<!-- FOR SALE POPUP -->
+<div id="salePopup" class="popup-overlay">
+  <div class="popup-box">
+    <button class="popup-close" onclick="closePopup()" aria-label="Close">&times;</button>
+    <div class="popup-badge">🏷️ This Website Is For Sale</div>
+    <h2>Own This Premium Domain & Site</h2>
+    <p>This fully built, SEO-optimized Thyroid Eye Disease resource site is available for purchase. Perfect for medical practices, pharma companies, or patient advocacy organizations.</p>
+    <form id="saleForm" onsubmit="submitSaleForm(event)">
+      <input type="text" id="popupName" placeholder="Your Name" required />
+      <input type="email" id="popupEmail" placeholder="Your Email" required />
+      <input type="tel" id="popupPhone" placeholder="Phone (optional)" />
+      <textarea id="popupMessage" placeholder="Your offer or inquiry..." rows="3" required></textarea>
+      <div class="captcha-box">
+        <label>Verify: What is <strong id="captchaQ"></strong>?</label>
+        <input type="number" id="captchaAnswer" placeholder="Your answer" required />
+      </div>
+      <button type="submit" class="btn-primary">Send Inquiry</button>
+      <p id="formSuccess" class="form-success" style="display:none">✅ Message sent! We'll be in touch soon.</p>
+      <p id="formError" class="form-error" style="display:none">❌ Incorrect answer. Please try again.</p>
+    </form>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header>
+  <div class="container header-inner">
+    <div class="logo">
+      <span class="logo-icon">👁️</span>
+      <div>
+        <strong>ThyroidEyeDisease.info</strong>
+        <small>Patient Education &amp; Resources</small>
+      </div>
+    </div>
+    <nav>
+      <a href="#about">About TED</a>
+      <a href="#symptoms">Symptoms</a>
+      <a href="#treatments">Treatments</a>
+      <a href="#resources">Resources</a>
+      <button class="btn-sale" onclick="openPopup()">Site For Sale</button>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <span class="hero-tag">Trusted Patient Resource</span>
+      <h1>Understanding<br /><span>Thyroid Eye Disease</span></h1>
+      <p>Thyroid Eye Disease (TED) is a serious autoimmune condition that affects the eyes and vision. Get comprehensive, up-to-date information on symptoms, diagnosis, and the latest breakthrough treatments.</p>
+      <div class="hero-actions">
+        <a href="#about" class="btn-primary">Learn About TED</a>
+        <a href="#treatments" class="btn-secondary">Latest Treatments</a>
+      </div>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><strong>1 in 100</strong><span>Graves' disease patients develop TED</span></div>
+      <div class="stat"><strong>~50%</strong><span>of Graves' disease patients have some eye involvement</span></div>
+      <div class="stat"><strong>FDA 2023</strong><span>First TED-specific drug approved (Tepezza)</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">What Is TED?</span>
+      <h2>About Thyroid Eye Disease</h2>
+    </div>
+    <div class="two-col">
+      <div class="content-block">
+        <p>Thyroid Eye Disease (TED), also known as Graves' ophthalmopathy or thyroid-associated orbitopathy, is an autoimmune condition in which the immune system mistakenly attacks the muscles and fatty tissue behind and around the eyes.</p>
+        <p>TED is most commonly associated with <strong>Graves' disease</strong>, a condition that causes the thyroid gland to overproduce hormones. However, TED can also occur in people with normal or even underactive thyroid function.</p>
+        <p>The condition occurs in two phases:</p>
+        <ul>
+          <li><strong>Active phase:</strong> Inflammation and swelling occur, lasting 6 months to 2 years. This is the critical window for medical treatment.</li>
+          <li><strong>Inactive (stable) phase:</strong> Inflammation subsides but physical changes — such as bulging eyes — may remain.</li>
+        </ul>
+        <p>TED affects women more than men, typically occurring between ages 30–50, and smoking significantly worsens the condition.</p>
+      </div>
+      <div class="info-cards">
+        <div class="info-card blue">
+          <h4>🔬 What Causes TED?</h4>
+          <p>TED is triggered when the immune system produces antibodies (TSH receptor antibodies / TRAb) that attack tissues in the thyroid and orbit, causing inflammation and swelling.</p>
+        </div>
+        <div class="info-card light">
+          <h4>⚠️ Risk Factors</h4>
+          <ul>
+            <li>Graves' disease diagnosis</li>
+            <li>Smoking (doubles the risk)</li>
+            <li>Radioactive iodine treatment</li>
+            <li>Female sex</li>
+            <li>Family history</li>
+          </ul>
+        </div>
+        <div class="info-card light">
+          <h4>🩺 Who Treats TED?</h4>
+          <p>A multidisciplinary team is often required: an endocrinologist, ophthalmologist, and oculoplastic surgeon working together for best outcomes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SYMPTOMS -->
+<section id="symptoms" class="section bg-light">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Recognizing TED</span>
+      <h2>Symptoms of Thyroid Eye Disease</h2>
+      <p>TED symptoms range from mild to severe. Early recognition is critical — the active phase is the optimal treatment window.</p>
+    </div>
+    <div class="symptoms-grid">
+      <div class="symptom-card">
+        <div class="symptom-icon">👁️</div>
+        <h4>Bulging Eyes (Proptosis)</h4>
+        <p>One of the most recognizable signs — eyes appear to protrude or bulge forward due to swelling of fat and muscles behind the eye.</p>
+        <span class="severity high">Common</span>
+      </div>
+      <div class="symptom-card">
+        <div class="symptom-icon">😭</div>
+        <h4>Dry, Gritty Eyes</h4>
+        <p>Reduced ability to close eyelids completely leads to dryness, irritation, and a persistent gritty or sandy feeling.</p>
+        <span class="severity high">Very Common</span>
+      </div>
+      <div class="symptom-card">
+        <div class="symptom-icon">🔴</div>
+        <h4>Redness & Swelling</h4>
+        <p>Inflammation of the conjunctiva (white of the eye), eyelids, and surrounding tissues causes visible redness and puffiness.</p>
+        <span class="severity medium">Common</span>
+      </div>
+      <div class="symptom-card">
+        <div class="symptom-icon">🌀</div>
+        <h4>Double Vision (Diplopia)</h4>
+        <p>Swelling of the extraocular muscles disrupts eye alignment, causing double vision — especially when looking up or sideways.</p>
+        <span class="severity medium">Moderate</span>
+      </div>
+      <div class="symptom-card">
+        <div class="symptom-icon">☀️</div>
+        <h4>Light Sensitivity</h4>
+        <p>Photophobia (sensitivity to light) is common due to corneal exposure and inflammation, making bright environments painful.</p>
+        <span class="severity medium">Common</span>
+      </div>
+      <div class="symptom-card">
+        <div class="symptom-icon">🚨</div>
+        <h4>Vision Loss</h4>
+        <p>In severe cases, compression of the optic nerve (dysthyroid optic neuropathy) can threaten permanent vision loss — a medical emergency.</p>
+        <span class="severity critical">Seek Care Immediately</span>
+      </div>
+      <div class="symptom-card">
+        <div class="symptom-icon">⬆️</div>
+        <h4>Eyelid Retraction</h4>
+        <p>Upper eyelids pull back, creating a wide-eyed, staring appearance. This is a hallmark sign of TED, even in mild cases.</p>
+        <span class="severity high">Common</span>
+      </div>
+      <div class="symptom-card">
+        <div class="symptom-icon">💧</div>
+        <h4>Excessive Tearing</h4>
+        <p>As a response to dryness and irritation, the eyes may paradoxically produce excess tears, causing frequent watering.</p>
+        <span class="severity low">Mild</span>
+      </div>
+    </div>
+    <div class="cta-banner">
+      <p>⚡ <strong>Important:</strong> If you experience sudden vision changes, pain with eye movement, or rapid worsening symptoms — seek emergency ophthalmologic care immediately.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TREATMENTS -->
+<section id="treatments" class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Medical Advances</span>
+      <h2>Treatments for Thyroid Eye Disease</h2>
+      <p>Treatment depends on the severity, phase of disease, and individual patient factors. Significant advances have been made in targeted therapies.</p>
+    </div>
+
+    <div class="treatment-tier">
+      <h3 class="tier-label">🟢 Mild TED</h3>
+      <div class="treatment-cards">
+        <div class="treatment-card">
+          <h4>Lubricating Eye Drops</h4>
+          <p>Artificial tears and lubricating ointments relieve dryness and protect the cornea from exposure damage.</p>
+        </div>
+        <div class="treatment-card">
+          <h4>Selenium Supplementation</h4>
+          <p>Studies show selenium (100 mcg twice daily for 6 months) can improve mild TED and reduce progression — recommended by European thyroid guidelines.</p>
+        </div>
+        <div class="treatment-card">
+          <h4>Smoking Cessation</h4>
+          <p>Stopping smoking is one of the most impactful interventions — smokers have more severe TED and poorer treatment responses.</p>
+        </div>
+        <div class="treatment-card">
+          <h4>Prism Glasses</h4>
+          <p>Prisms added to eyeglass lenses can help manage mild double vision without surgery.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="treatment-tier">
+      <h3 class="tier-label">🟡 Moderate-to-Severe TED</h3>
+      <div class="treatment-cards">
+        <div class="treatment-card featured">
+          <span class="new-badge">FDA Approved 2020</span>
+          <h4>Teprotumumab (Tepezza)</h4>
+          <p>The first FDA-approved drug specifically for TED. A monoclonal antibody that blocks IGF-1R, dramatically reducing proptosis and double vision in clinical trials. Given as 8 IV infusions over 24 weeks.</p>
+          <p><em>Clinical results: ~83% of patients saw proptosis reduction; ~68% had improved double vision.</em></p>
+        </div>
+        <div class="treatment-card">
+          <h4>IV Glucocorticoids</h4>
+          <p>High-dose intravenous methylprednisolone reduces orbital inflammation. Most effective during the active phase. Typically administered weekly for 12 weeks.</p>
+        </div>
+        <div class="treatment-card">
+          <h4>Orbital Radiation</h4>
+          <p>Low-dose external beam radiation to the orbit reduces inflammation in select patients, often used in combination with steroids.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="treatment-tier">
+      <h3 class="tier-label">🔴 Severe / Stable Phase TED</h3>
+      <div class="treatment-cards">
+        <div class="treatment-card">
+          <h4>Orbital Decompression Surgery</h4>
+          <p>Removes bone and/or fat from the eye socket to create more space, reducing proptosis and relieving optic nerve compression.</p>
+        </div>
+        <div class="treatment-card">
+          <h4>Strabismus Surgery</h4>
+          <p>Adjusts the position of eye muscles to correct double vision after the active phase has resolved and the condition is stable.</p>
+        </div>
+        <div class="treatment-card">
+          <h4>Eyelid Surgery</h4>
+          <p>Corrects eyelid retraction, improves eye closure, and addresses cosmetic concerns once TED is no longer active.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="emerging-box">
+      <h3>🔬 Emerging & Pipeline Treatments (2024–2025)</h3>
+      <div class="emerging-grid">
+        <div>
+          <h4>Linsitinib (oral IGF-1R inhibitor)</h4>
+          <p>Oral alternative to Tepezza currently in Phase 3 clinical trials — promising results for patients seeking non-infusion options.</p>
+        </div>
+        <div>
+          <h4>Batoclimab (anti-FcRn)</h4>
+          <p>Reduces TRAb antibody levels. Phase 3 trials underway — may address the underlying autoimmune cause more directly.</p>
+        </div>
+        <div>
+          <h4>Istabimab (anti-IGF-1R)</h4>
+          <p>Another next-generation monoclonal antibody targeting the IGF-1R pathway with potentially fewer side effects.</p>
+        </div>
+        <div>
+          <h4>Subcutaneous Teprotumumab</h4>
+          <p>A subcutaneous (under-skin injection) formulation of Tepezza is in development, offering a more convenient self-administration option.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESOURCES -->
+<section id="resources" class="section bg-light">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Get Help</span>
+      <h2>Patient Resources</h2>
+    </div>
+    <div class="resources-grid">
+      <a href="https://www.gdatf.org" target="_blank" class="resource-card">
+        <h4>Graves' Disease & Thyroid Foundation</h4>
+        <p>Patient support, education, and community resources for Graves' disease and TED patients.</p>
+        <span>gdatf.org →</span>
+      </a>
+      <a href="https://www.aao.org" target="_blank" class="resource-card">
+        <h4>American Academy of Ophthalmology</h4>
+        <p>Find a TED specialist, clinical guidelines, and patient education materials.</p>
+        <span>aao.org →</span>
+      </a>
+      <a href="https://clinicaltrials.gov/search?cond=Thyroid+Eye+Disease" target="_blank" class="resource-card">
+        <h4>Clinical Trials</h4>
+        <p>Search active clinical trials for TED treatments — you may qualify for cutting-edge therapies.</p>
+        <span>clinicaltrials.gov →</span>
+      </a>
+      <a href="https://www.thyroid.org" target="_blank" class="resource-card">
+        <h4>American Thyroid Association</h4>
+        <p>Comprehensive thyroid disease information, physician finder, and patient resources.</p>
+        <span>thyroid.org →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container footer-inner">
+    <div>
+      <strong>👁️ ThyroidEyeDisease.info</strong>
+      <p>This site is for educational purposes only and does not constitute medical advice. Always consult a qualified healthcare provider.</p>
+    </div>
+    <div class="footer-links">
+      <a href="#about">About TED</a>
+      <a href="#symptoms">Symptoms</a>
+      <a href="#treatments">Treatments</a>
+      <a href="#resources">Resources</a>
+      <button onclick="openPopup()" class="footer-sale-btn">🏷️ Site For Sale</button>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 ThyroidEyeDisease.info · Educational Resource · <em>Not medical advice</em></p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
