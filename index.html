@@ -14,14 +14,32 @@
 <div id="salePopup" class="popup-overlay">
   <div class="popup-box">
     <button class="popup-close" onclick="closePopup()" aria-label="Close">&times;</button>
-    <div class="popup-badge">🏷️ This Website Is For Sale</div>
-    <h2>Own This Premium Domain & Site</h2>
-    <p>This fully built, SEO-optimized Thyroid Eye Disease resource site is available for purchase. Perfect for medical practices, pharma companies, or patient advocacy organizations.</p>
+    <div class="popup-badge">🏷️ Premium Domain Portfolio For Sale</div>
+    <h2>Own These TED Domain Assets</h2>
+    <p>All 4 premium Thyroid Eye Disease domains are available — individually or as a package. Perfect for medical practices, pharma companies, or patient advocacy organizations.</p>
+    <div class="domain-list">
+      <div class="domain-item">
+        <span class="domain-name">ThyroidEyeDisease.info</span>
+        <span class="domain-tag">This Site</span>
+      </div>
+      <div class="domain-item">
+        <span class="domain-name">TED-Treatments.com</span>
+        <span class="domain-tag">For Sale</span>
+      </div>
+      <div class="domain-item">
+        <span class="domain-name">Thyroid-Eyes.com</span>
+        <span class="domain-tag">For Sale</span>
+      </div>
+      <div class="domain-item">
+        <span class="domain-name">Thyroid-Eyes.info</span>
+        <span class="domain-tag">For Sale</span>
+      </div>
+    </div>
     <form id="saleForm" onsubmit="submitSaleForm(event)">
       <input type="text" id="popupName" placeholder="Your Name" required />
       <input type="email" id="popupEmail" placeholder="Your Email" required />
       <input type="tel" id="popupPhone" placeholder="Phone (optional)" />
-      <textarea id="popupMessage" placeholder="Your offer or inquiry..." rows="3" required></textarea>
+      <textarea id="popupMessage" placeholder="Your offer or inquiry — mention which domain(s) you're interested in..." rows="3" required></textarea>
       <div class="captcha-box">
         <label>Verify: What is <strong id="captchaQ"></strong>?</label>
         <input type="number" id="captchaAnswer" placeholder="Your answer" required />
@@ -48,7 +66,7 @@
       <a href="#symptoms">Symptoms</a>
       <a href="#treatments">Treatments</a>
       <a href="#resources">Resources</a>
-      <button class="btn-sale" onclick="openPopup()">Site For Sale</button>
+      <button class="btn-sale" onclick="openPopup()">🏷️ Domains For Sale</button>
     </nav>
   </div>
 </header>
@@ -304,19 +322,66 @@
   </div>
 </section>
 
+<!-- DOMAINS FOR SALE BANNER -->
+<section class="domains-sale-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">🏷️ Domain Portfolio</span>
+      <h2>Premium TED Domains For Sale</h2>
+      <p>Own a commanding online presence in the Thyroid Eye Disease space. These keyword-rich domains are ideal for medical practices, pharmaceutical companies, or patient advocacy groups.</p>
+    </div>
+    <div class="domains-grid">
+      <div class="domain-sale-card primary">
+        <div class="domain-sale-icon">👁️</div>
+        <h3>ThyroidEyeDisease.info</h3>
+        <p>The most authoritative domain in the TED space — includes this fully built, content-rich website.</p>
+        <span class="domain-sale-badge">Site + Domain</span>
+        <button class="btn-domain-inquiry" onclick="openPopup()">Inquire Now</button>
+      </div>
+      <div class="domain-sale-card">
+        <div class="domain-sale-icon">💊</div>
+        <h3>TED-Treatments.com</h3>
+        <p>High-intent domain targeting patients and physicians searching for TED treatment options.</p>
+        <span class="domain-sale-badge">Domain Only</span>
+        <button class="btn-domain-inquiry" onclick="openPopup()">Inquire Now</button>
+      </div>
+      <div class="domain-sale-card">
+        <div class="domain-sale-icon">🔍</div>
+        <h3>Thyroid-Eyes.com</h3>
+        <p>Memorable, brandable .com domain directly describing the condition — strong SEO potential.</p>
+        <span class="domain-sale-badge">Domain Only</span>
+        <button class="btn-domain-inquiry" onclick="openPopup()">Inquire Now</button>
+      </div>
+      <div class="domain-sale-card">
+        <div class="domain-sale-icon">🌐</div>
+        <h3>Thyroid-Eyes.info</h3>
+        <p>Companion .info domain — perfect to acquire alongside Thyroid-Eyes.com for full brand protection.</p>
+        <span class="domain-sale-badge">Domain Only</span>
+        <button class="btn-domain-inquiry" onclick="openPopup()">Inquire Now</button>
+      </div>
+    </div>
+    <div class="domain-package-cta">
+      <p>💼 <strong>Buy the full portfolio</strong> and dominate the TED space online. <button onclick="openPopup()" class="inline-link">Contact us about a package deal →</button></p>
+    </div>
+  </div>
+</section>
+
 <!-- FOOTER -->
 <footer>
   <div class="container footer-inner">
     <div>
       <strong>👁️ ThyroidEyeDisease.info</strong>
       <p>This site is for educational purposes only and does not constitute medical advice. Always consult a qualified healthcare provider.</p>
+      <div class="footer-domains">
+        <p><strong>Also for sale:</strong> TED-Treatments.com &nbsp;·&nbsp; Thyroid-Eyes.com &nbsp;·&nbsp; Thyroid-Eyes.info</p>
+      </div>
     </div>
     <div class="footer-links">
       <a href="#about">About TED</a>
       <a href="#symptoms">Symptoms</a>
       <a href="#treatments">Treatments</a>
       <a href="#resources">Resources</a>
-      <button onclick="openPopup()" class="footer-sale-btn">🏷️ Site For Sale</button>
+      <button onclick="openPopup()" class="footer-sale-btn">🏷️ Domains For Sale</button>
     </div>
   </div>
   <div class="footer-bottom">
