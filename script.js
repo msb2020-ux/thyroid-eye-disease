@@ -23,22 +23,45 @@ function generateCaptcha() {
   document.getElementById('captchaAnswer').value = '';
 }
 
-// FORM SUBMIT
-function submitSaleForm(e) {
+// FORM SUBMIT — wired to Formspree
+async function submitSaleForm(e) {
   e.preventDefault();
   const userAnswer = parseInt(document.getElementById('captchaAnswer').value);
   document.getElementById('formSuccess').style.display = 'none';
   document.getElementById('formError').style.display = 'none';
+
   if (userAnswer !== captchaAnswer) {
+    document.getElementById('formError').textContent = '❌ Incorrect answer. Please try again.';
     document.getElementById('formError').style.display = 'block';
     generateCaptcha();
     return;
   }
-  // Success
-  document.getElementById('formSuccess').style.display = 'block';
-  document.getElementById('saleForm').reset();
-  generateCaptcha();
-  setTimeout(closePopup, 3000);
+
+  const name    = document.getElementById('popupName').value;
+  const email   = document.getElementById('popupEmail').value;
+  const phone   = document.getElementById('popupPhone').value;
+  const message = document.getElementById('popupMessage').value;
+
+  try {
+    const response = await fetch('https://formspree.io/f/xaqlyrde', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({ name, email, phone, message })
+    });
+
+    if (response.ok) {
+      document.getElementById('formSuccess').style.display = 'block';
+      document.getElementById('saleForm').reset();
+      generateCaptcha();
+      setTimeout(closePopup, 3000);
+    } else {
+      document.getElementById('formError').textContent = '❌ Something went wrong. Please try again.';
+      document.getElementById('formError').style.display = 'block';
+    }
+  } catch (err) {
+    document.getElementById('formError').textContent = '❌ Network error. Please try again.';
+    document.getElementById('formError').style.display = 'block';
+  }
 }
 
 // SMOOTH SCROLL
